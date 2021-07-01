@@ -83,5 +83,7 @@ public class Carros {
         this.status = status;
     }
     
-    
+    public String toString(){
+        return this.id+" "+this.modelo+" "+this.cor;
+    }
 }

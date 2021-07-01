@@ -46,6 +46,7 @@ public class CarrosDAO {
         }
         catch(Exception e){
             System.out.println("Erro ao inserir carro: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"ERRO AO CADASTRAR CARRO: "+e.getMessage());
         }
     }
     
@@ -65,6 +66,7 @@ public class CarrosDAO {
             JOptionPane.showMessageDialog(null,"CARRO EDITADO COM SUCESSO");
         } catch (Exception e) {
             System.out.println("Erro ou editar carro: " +e.getMessage());
+            JOptionPane.showMessageDialog(null,"ERRO AO EDITAR CARRO: "+e.getMessage());
         }
     }
     
@@ -77,6 +79,7 @@ public class CarrosDAO {
             JOptionPane.showMessageDialog(null,"CARRO EXCLUIDO COM SUCESSO");
         } catch (Exception e) {
             System.out.println("Erro ao excluir carro: "+e.getMessage());
+            JOptionPane.showMessageDialog(null,"ERRO AO EXCLUIR CARRO: "+e.getMessage());
         }
     }
     
@@ -95,6 +98,22 @@ public class CarrosDAO {
             carros.setQuilometragem(rs.getInt("quilometragem"));
             carros.setValordia(rs.getInt("valordia"));
             carros.setValorkm(rs.getInt("valorkm"));
+            return carros;
+        } catch (Exception e) {
+            return null;
+        }}
+        
+        public Carros getStatus(int id){
+        String sql = "SELECT status FROM carros WHERE id = ?";
+        try {
+            PreparedStatement stmt = this.conn.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            Carros carros = new Carros();
+            rs.first();
+            carros.setId(id);
+            carros.setStatus(rs.getBoolean("status"));
+            
             return carros;
         } catch (Exception e) {
             return null;

@@ -5,17 +5,48 @@
  */
 package locacar;
 
+import beans.Alugados;
+import beans.Carros;
+import beans.Clientes;
+import dao.AlugadosDAO;
+import dao.CarrosDAO;
+import dao.ClientesDAO;
+import java.time.LocalDate;
+import java.util.List;
+import javax.swing.JOptionPane;
+import java.sql.Date;
+
 /**
  *
  * @author Guilh
  */
 public class MenuAlugar extends javax.swing.JFrame {
+    
+    private void preencherComboCarros(){
+        CarrosDAO carrosDAO = new CarrosDAO();
+        List<Carros> lista = carrosDAO.getCarros("");
+        
+        for(Carros c: lista){
+            cmbCarros.addItem(c);
+        }
+    }
+    
+    private void preencherComboClientes(){
+        ClientesDAO clientesDAO = new ClientesDAO();
+        List<Clientes> lista = clientesDAO.getClientes("");
+        
+        for(Clientes c: lista){
+            cmbClientes.addItem(c);
+        }
+    }
 
     /**
      * Creates new form MenuAlugar
      */
     public MenuAlugar() {
         initComponents();
+        preencherComboCarros();
+        preencherComboClientes();
     }
 
     /**
@@ -30,9 +61,10 @@ public class MenuAlugar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtCpfCliente = new javax.swing.JTextField();
-        txtIdCarro = new javax.swing.JTextField();
-        btnAlugar = new javax.swing.JButton();
+        btnRelatorio = new javax.swing.JButton();
+        btnAlugar1 = new javax.swing.JButton();
+        cmbClientes = new javax.swing.JComboBox();
+        cmbCarros = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Alugar");
@@ -44,33 +76,50 @@ public class MenuAlugar extends javax.swing.JFrame {
         jLabel2.setText("CPF do Cliente:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel3.setText("ID do Carro:");
+        jLabel3.setText("Carro:");
 
-        btnAlugar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        btnAlugar.setText("ALUGAR");
+        btnRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnRelatorio.setText("RELATÓRIO");
+        btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRelatorioActionPerformed(evt);
+            }
+        });
+
+        btnAlugar1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnAlugar1.setText("ALUGAR");
+        btnAlugar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlugar1ActionPerformed(evt);
+            }
+        });
+
+        cmbClientes.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+
+        cmbCarros.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAlugar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(161, 161, 161)
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(203, 203, 203)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(txtIdCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel1)))))
-                .addContainerGap(496, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cmbCarros, 0, 565, Short.MAX_VALUE)
+                    .addComponent(cmbClientes, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnAlugar1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRelatorio))
+                .addGap(35, 35, 35))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(503, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(450, 450, 450))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,24 +127,47 @@ public class MenuAlugar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(txtIdCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
-                        .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)))
-                .addGap(115, 115, 115)
-                .addComponent(btnAlugar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
+                            .addComponent(cmbCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(cmbClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(btnAlugar1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRelatorioActionPerformed
+
+    private void btnAlugar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugar1ActionPerformed
+        // TODO add your handling code here:
+        LocalDate localDate = LocalDate.now();
+        Date data = Date.valueOf(localDate);
+        Clientes clientescpf = (Clientes) cmbClientes.getSelectedItem();
+        Carros carrosid = (Carros) cmbCarros.getSelectedItem();
+        
+        Alugados alugados = new Alugados();
+        alugados.setClientescpf(clientescpf);
+        alugados.setCarrosid(carrosid);
+        alugados.setData(data);
+        
+        AlugadosDAO alugadosDAO = new AlugadosDAO();
+        alugadosDAO.alugar(alugados);
+        JOptionPane.showMessageDialog(this, "Carro alugado com sucesso!");
+    }//GEN-LAST:event_btnAlugar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,11 +205,12 @@ public class MenuAlugar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAlugar;
+    private javax.swing.JButton btnAlugar1;
+    private javax.swing.JButton btnRelatorio;
+    private javax.swing.JComboBox cmbCarros;
+    private javax.swing.JComboBox cmbClientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtCpfCliente;
-    private javax.swing.JTextField txtIdCarro;
     // End of variables declaration//GEN-END:variables
 }

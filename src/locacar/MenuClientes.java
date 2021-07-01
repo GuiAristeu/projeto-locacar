@@ -44,161 +44,122 @@ public class MenuClientes extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         btnClientePesquisar = new javax.swing.JButton();
         txtClientePesquisar = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Clientes");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setText("LocaCar");
+        jLabel1.setText("Clientes");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(457, 6, 167, 64);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("CPF:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(138, 372, 68, 48);
 
         btnClienteLista.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnClienteLista.setText("LISTA");
+        btnClienteLista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_side_list.png"))); // NOI18N
+        btnClienteLista.setText("         LISTA");
         btnClienteLista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClienteListaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnClienteLista);
+        btnClienteLista.setBounds(615, 498, 190, 60);
 
         txtCpfCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCpfClienteActionPerformed(evt);
             }
         });
+        getContentPane().add(txtCpfCliente);
+        txtCpfCliente.setBounds(224, 385, 240, 35);
 
         txtNomeCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeClienteActionPerformed(evt);
             }
         });
+        getContentPane().add(txtNomeCliente);
+        txtNomeCliente.setBounds(221, 445, 243, 35);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setText("Nome:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(103, 432, 106, 48);
 
         btnClienteCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClienteCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/add.png"))); // NOI18N
         btnClienteCadastrar.setText("CADASTRAR");
         btnClienteCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClienteCadastrarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnClienteCadastrar);
+        btnClienteCadastrar.setBounds(615, 263, 190, 60);
 
         btnClienteEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnClienteEditar.setText("EDITAR");
+        btnClienteEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_edit.png"))); // NOI18N
+        btnClienteEditar.setText("       EDITAR");
         btnClienteEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClienteEditarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnClienteEditar);
+        btnClienteEditar.setBounds(615, 341, 190, 60);
 
         btnClienteExcluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnClienteExcluir.setText("EXCLUIR");
+        btnClienteExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_delete.png"))); // NOI18N
+        btnClienteExcluir.setText("     EXCLUIR");
         btnClienteExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClienteExcluirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnClienteExcluir);
+        btnClienteExcluir.setBounds(615, 419, 190, 60);
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 235, 1114, 10);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel11.setText("Pesquisar CPF:");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(62, 128, 228, 48);
 
         btnClientePesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClientePesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_form_magnify.png"))); // NOI18N
         btnClientePesquisar.setText("PESQUISAR");
         btnClientePesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClientePesquisarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnClientePesquisar);
+        btnClientePesquisar.setBounds(636, 128, 190, 60);
 
+        txtClientePesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txtClientePesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtClientePesquisarActionPerformed(evt);
             }
         });
+        getContentPane().add(txtClientePesquisar);
+        txtClientePesquisar.setBounds(308, 141, 277, 35);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(457, 457, 457)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtClientePesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51)
-                        .addComponent(btnClientePesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(310, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnClienteLista, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtCpfCliente))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnClienteEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnClienteExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnClienteCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(331, 331, 331))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnClientePesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel11)
-                        .addComponent(txtClientePesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnClienteCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnClienteEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnClienteExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(txtCpfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(txtNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addComponent(btnClienteLista, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(212, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-3, -4, 1140, 810);
 
-        pack();
+        setSize(new java.awt.Dimension(1130, 778));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -321,6 +282,7 @@ public class MenuClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField txtClientePesquisar;
     private javax.swing.JTextField txtCpfCliente;

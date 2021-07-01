@@ -20,6 +20,7 @@ public class LocaCar {
         // TODO code application logic here
         Conexao c = new Conexao();
         c.getConexao();
+        new TelaLogin().setVisible(true);
     }
     
 }

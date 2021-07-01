@@ -30,5 +30,7 @@ public class Clientes {
     }
 
     
-    
+    public String toString(){
+        return this.nome+" - "+this.cpf;
+    }
 }

@@ -58,6 +58,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtCarroPesquisar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         btnCarroPesquisar = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel8.setText("Valor por dia:");
@@ -79,12 +80,17 @@ public class MenuCarros extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Carros");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setText("LocaCar");
+        jLabel1.setText("Carros");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(473, 0, 136, 64);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("ID:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(221, 195, 43, 48);
 
         txtIdCarro.setEditable(false);
         txtIdCarro.addActionListener(new java.awt.event.ActionListener() {
@@ -92,222 +98,166 @@ public class MenuCarros extends javax.swing.JFrame {
                 txtIdCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtIdCarro);
+        txtIdCarro.setBounds(282, 208, 126, 35);
 
         txtMarcaCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMarcaCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtMarcaCarro);
+        txtMarcaCarro.setBounds(282, 256, 177, 35);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setText("Marca:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(158, 243, 106, 48);
 
         txtModeloCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtModeloCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtModeloCarro);
+        txtModeloCarro.setBounds(282, 322, 177, 35);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel4.setText("Modelo:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(133, 309, 131, 48);
 
         txtCorCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCorCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtCorCarro);
+        txtCorCarro.setBounds(282, 388, 177, 35);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel5.setText("Cor:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(200, 375, 64, 48);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel6.setText("Quilometragem:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(6, 441, 258, 48);
 
         txtKmCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtKmCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtKmCarro);
+        txtKmCarro.setBounds(282, 454, 177, 35);
 
         btnCarroExcluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnCarroExcluir.setText("EXCLUIR");
+        btnCarroExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_delete.png"))); // NOI18N
+        btnCarroExcluir.setText("     EXCLUIR");
         btnCarroExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarroExcluirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarroExcluir);
+        btnCarroExcluir.setBounds(742, 412, 190, 60);
 
         btnCarroLista.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnCarroLista.setText("LISTA");
+        btnCarroLista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_side_list.png"))); // NOI18N
+        btnCarroLista.setText("         LISTA");
         btnCarroLista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarroListaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarroLista);
+        btnCarroLista.setBounds(742, 490, 190, 60);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel7.setText("Valor por dia:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(50, 507, 214, 48);
 
         txtValorDiaCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValorDiaCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtValorDiaCarro);
+        txtValorDiaCarro.setBounds(282, 524, 177, 35);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel9.setText("Valor por Km:");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(46, 577, 218, 48);
 
         txtValorKmCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtValorKmCarroActionPerformed(evt);
             }
         });
+        getContentPane().add(txtValorKmCarro);
+        txtValorKmCarro.setBounds(282, 590, 177, 35);
 
         btnCarroCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/add.png"))); // NOI18N
         btnCarroCadastrar.setText("CADASTRAR");
         btnCarroCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarroCadastrarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarroCadastrar);
+        btnCarroCadastrar.setBounds(742, 256, 190, 60);
 
         btnCarroEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnCarroEditar.setText("EDITAR");
+        btnCarroEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_edit.png"))); // NOI18N
+        btnCarroEditar.setText("      EDITAR");
         btnCarroEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarroEditarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarroEditar);
+        btnCarroEditar.setBounds(742, 334, 190, 60);
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(6, 167, 1102, 10);
 
+        txtCarroPesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txtCarroPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCarroPesquisarActionPerformed(evt);
             }
         });
+        getContentPane().add(txtCarroPesquisar);
+        txtCarroPesquisar.setBounds(478, 93, 109, 35);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel11.setText("Pesquisar ID:");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(269, 82, 203, 48);
 
         btnCarroPesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_form_magnify.png"))); // NOI18N
         btnCarroPesquisar.setText("PESQUISAR");
         btnCarroPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCarroPesquisarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarroPesquisar);
+        btnCarroPesquisar.setBounds(657, 70, 170, 60);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtValorKmCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtIdCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtCorCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtKmCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtValorDiaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtMarcaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtModeloCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnCarroCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCarroEditar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCarroExcluir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCarroLista, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(204, 204, 204))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addContainerGap())))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(473, 473, 473)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(269, 269, 269)
-                        .addComponent(jLabel11)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCarroPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
-                        .addComponent(btnCarroPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtCarroPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnCarroPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtIdCarro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(txtMarcaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(txtModeloCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
-                            .addComponent(txtCorCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addComponent(txtKmCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(txtValorDiaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel9))
-                            .addComponent(txtValorKmCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(btnCarroCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCarroEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCarroExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCarroLista, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(156, 156, 156))
-        );
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel12.setText("jLabel5");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(-3, -4, 1130, 800);
 
-        pack();
+        setSize(new java.awt.Dimension(1130, 789));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -342,8 +292,9 @@ public class MenuCarros extends javax.swing.JFrame {
         txtModeloCarro.setText("");
         txtCorCarro.setText("");
         txtKmCarro.setText("");
-        txtValorKmCarro.setText("");
         txtValorDiaCarro.setText("");
+        txtValorKmCarro.setText("");
+        
     }//GEN-LAST:event_btnCarroExcluirActionPerformed
 
     private void btnCarroListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarroListaActionPerformed
@@ -370,8 +321,8 @@ public class MenuCarros extends javax.swing.JFrame {
         String modelo = txtModeloCarro.getText();
         String cor = txtCorCarro.getText();
         int quilometragem = Integer.parseInt(txtKmCarro.getText());
-        int valordia = Integer.parseInt(txtValorKmCarro.getText());
-        int valorkm = Integer.parseInt(txtValorDiaCarro.getText());
+        int valordia = Integer.parseInt(txtValorDiaCarro.getText());
+        int valorkm = Integer.parseInt(txtValorKmCarro.getText());
         boolean status = true;
         
         Carros carros = new Carros();
@@ -497,6 +448,7 @@ public class MenuCarros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

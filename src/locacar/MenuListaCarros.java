@@ -64,6 +64,7 @@ public class MenuListaCarros extends javax.swing.JFrame {
         tblListaCarros = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         txtModeloCarroLista = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         btnEntregar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnEntregar.setText("Entregar");
@@ -78,9 +79,12 @@ public class MenuListaCarros extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Lista de carros");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setText("LocaCar");
+        jLabel1.setText("Carros");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(472, 6, 136, 64);
 
         tblListaCarros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -92,49 +96,29 @@ public class MenuListaCarros extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblListaCarros);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(15, 203, 1130, 520);
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel4.setText("Modelo do carro:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(33, 137, 275, 48);
 
+        txtModeloCarroLista.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txtModeloCarroLista.addCaretListener(new javax.swing.event.CaretListener() {
             public void caretUpdate(javax.swing.event.CaretEvent evt) {
                 txtModeloCarroListaCaretUpdate(evt);
             }
         });
+        getContentPane().add(txtModeloCarroLista);
+        txtModeloCarroLista.setBounds(314, 140, 372, 45);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtModeloCarroLista, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(472, 472, 472)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtModeloCarroLista, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-3, -4, 1200, 780);
 
-        pack();
+        setSize(new java.awt.Dimension(1177, 744));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -187,6 +171,7 @@ public class MenuListaCarros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblListaCarros;
     private javax.swing.JTextField txtIdCarro;

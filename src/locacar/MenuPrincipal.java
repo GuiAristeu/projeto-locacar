@@ -28,24 +28,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnAlugar = new javax.swing.JButton();
         btnClientes = new javax.swing.JButton();
-        btnEntregar = new javax.swing.JButton();
         btnCarros = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Principal");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setText("LocaCar");
-
-        btnAlugar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        btnAlugar.setText("ALUGAR");
-        btnAlugar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlugarActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("Menu Principal");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(229, 6, 316, 64);
 
         btnClientes.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnClientes.setText("CLIENTES");
@@ -54,14 +48,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btnClientesActionPerformed(evt);
             }
         });
-
-        btnEntregar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        btnEntregar.setText("ENTREGAR");
-        btnEntregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntregarActionPerformed(evt);
-            }
-        });
+        getContentPane().add(btnClientes);
+        btnClientes.setBounds(482, 236, 204, 54);
 
         btnCarros.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnCarros.setText("CARROS");
@@ -70,44 +58,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 btnCarrosActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCarros);
+        btnCarros.setBounds(93, 236, 204, 54);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAlugar, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(185, 185, 185)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnEntregar)
-                            .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(136, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(141, 141, 141)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCarros)
-                    .addComponent(btnClientes))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEntregar)
-                    .addComponent(btnAlugar))
-                .addGap(153, 153, 153))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-3, -4, 830, 550);
 
-        pack();
+        setSize(new java.awt.Dimension(830, 543));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -122,18 +81,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuClientes menuClientes = new MenuClientes();
         menuClientes.setVisible(true);
     }//GEN-LAST:event_btnClientesActionPerformed
-
-    private void btnAlugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarActionPerformed
-        // TODO add your handling code here:
-        MenuAlugar menuAlugar = new MenuAlugar();
-        menuAlugar.setVisible(true);
-    }//GEN-LAST:event_btnAlugarActionPerformed
-
-    private void btnEntregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntregarActionPerformed
-        // TODO add your handling code here:
-        MenuEntregar menuEntregar = new MenuEntregar();
-        menuEntregar.setVisible(true);
-    }//GEN-LAST:event_btnEntregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,10 +118,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAlugar;
     private javax.swing.JButton btnCarros;
     private javax.swing.JButton btnClientes;
-    private javax.swing.JButton btnEntregar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
