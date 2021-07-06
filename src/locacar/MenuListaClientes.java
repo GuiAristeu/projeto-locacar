@@ -63,11 +63,13 @@ public class MenuListaClientes extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Clientes");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(510, 6, 167, 64);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nome do Cliente:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(71, 137, 278, 48);

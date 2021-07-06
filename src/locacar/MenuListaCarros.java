@@ -82,6 +82,7 @@ public class MenuListaCarros extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Carros");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(472, 6, 136, 64);
@@ -100,6 +101,7 @@ public class MenuListaCarros extends javax.swing.JFrame {
         jScrollPane1.setBounds(15, 203, 1130, 520);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Modelo do carro:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(33, 137, 275, 48);

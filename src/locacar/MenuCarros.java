@@ -83,11 +83,13 @@ public class MenuCarros extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Carros");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(473, 0, 136, 64);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ID:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(221, 195, 43, 48);
@@ -110,6 +112,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtMarcaCarro.setBounds(282, 256, 177, 35);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Marca:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(158, 243, 106, 48);
@@ -123,6 +126,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtModeloCarro.setBounds(282, 322, 177, 35);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Modelo:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(133, 309, 131, 48);
@@ -136,11 +140,13 @@ public class MenuCarros extends javax.swing.JFrame {
         txtCorCarro.setBounds(282, 388, 177, 35);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Cor:");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(200, 375, 64, 48);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Quilometragem:");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(6, 441, 258, 48);
@@ -154,6 +160,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtKmCarro.setBounds(282, 454, 177, 35);
 
         btnCarroExcluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroExcluir.setForeground(new java.awt.Color(0, 0, 0));
         btnCarroExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_delete.png"))); // NOI18N
         btnCarroExcluir.setText("     EXCLUIR");
         btnCarroExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +172,7 @@ public class MenuCarros extends javax.swing.JFrame {
         btnCarroExcluir.setBounds(742, 412, 190, 60);
 
         btnCarroLista.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroLista.setForeground(new java.awt.Color(0, 0, 0));
         btnCarroLista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_side_list.png"))); // NOI18N
         btnCarroLista.setText("         LISTA");
         btnCarroLista.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +184,7 @@ public class MenuCarros extends javax.swing.JFrame {
         btnCarroLista.setBounds(742, 490, 190, 60);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Valor por dia:");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(50, 507, 214, 48);
@@ -189,6 +198,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtValorDiaCarro.setBounds(282, 524, 177, 35);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Valor por Km:");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(46, 577, 218, 48);
@@ -202,6 +212,7 @@ public class MenuCarros extends javax.swing.JFrame {
         txtValorKmCarro.setBounds(282, 590, 177, 35);
 
         btnCarroCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroCadastrar.setForeground(new java.awt.Color(0, 0, 0));
         btnCarroCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/add.png"))); // NOI18N
         btnCarroCadastrar.setText("CADASTRAR");
         btnCarroCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +224,7 @@ public class MenuCarros extends javax.swing.JFrame {
         btnCarroCadastrar.setBounds(742, 256, 190, 60);
 
         btnCarroEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnCarroEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_edit.png"))); // NOI18N
         btnCarroEditar.setText("      EDITAR");
         btnCarroEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -237,11 +249,13 @@ public class MenuCarros extends javax.swing.JFrame {
         txtCarroPesquisar.setBounds(478, 93, 109, 35);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Pesquisar ID:");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(269, 82, 203, 48);
 
         btnCarroPesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarroPesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnCarroPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_form_magnify.png"))); // NOI18N
         btnCarroPesquisar.setText("PESQUISAR");
         btnCarroPesquisar.addActionListener(new java.awt.event.ActionListener() {

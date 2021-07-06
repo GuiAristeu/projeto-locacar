@@ -51,16 +51,19 @@ public class MenuClientes extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Clientes");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(457, 6, 167, 64);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("CPF:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(138, 372, 68, 48);
 
         btnClienteLista.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClienteLista.setForeground(new java.awt.Color(0, 0, 0));
         btnClienteLista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_side_list.png"))); // NOI18N
         btnClienteLista.setText("         LISTA");
         btnClienteLista.addActionListener(new java.awt.event.ActionListener() {
@@ -88,11 +91,13 @@ public class MenuClientes extends javax.swing.JFrame {
         txtNomeCliente.setBounds(221, 445, 243, 35);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Nome:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(103, 432, 106, 48);
 
         btnClienteCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClienteCadastrar.setForeground(new java.awt.Color(0, 0, 0));
         btnClienteCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/add.png"))); // NOI18N
         btnClienteCadastrar.setText("CADASTRAR");
         btnClienteCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +109,7 @@ public class MenuClientes extends javax.swing.JFrame {
         btnClienteCadastrar.setBounds(615, 263, 190, 60);
 
         btnClienteEditar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClienteEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnClienteEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_edit.png"))); // NOI18N
         btnClienteEditar.setText("       EDITAR");
         btnClienteEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +121,7 @@ public class MenuClientes extends javax.swing.JFrame {
         btnClienteEditar.setBounds(615, 341, 190, 60);
 
         btnClienteExcluir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClienteExcluir.setForeground(new java.awt.Color(0, 0, 0));
         btnClienteExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_delete.png"))); // NOI18N
         btnClienteExcluir.setText("     EXCLUIR");
         btnClienteExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -130,11 +137,13 @@ public class MenuClientes extends javax.swing.JFrame {
         jSeparator1.setBounds(0, 235, 1114, 10);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Pesquisar CPF:");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(62, 128, 228, 48);
 
         btnClientePesquisar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnClientePesquisar.setForeground(new java.awt.Color(0, 0, 0));
         btnClientePesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_form_magnify.png"))); // NOI18N
         btnClientePesquisar.setText("PESQUISAR");
         btnClientePesquisar.addActionListener(new java.awt.event.ActionListener() {

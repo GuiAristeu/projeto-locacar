@@ -37,11 +37,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Menu Principal");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(229, 6, 316, 64);
 
         btnClientes.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnClientes.setForeground(new java.awt.Color(0, 0, 0));
         btnClientes.setText("CLIENTES");
         btnClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +54,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnClientes.setBounds(482, 236, 204, 54);
 
         btnCarros.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnCarros.setForeground(new java.awt.Color(0, 0, 0));
         btnCarros.setText("CARROS");
         btnCarros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

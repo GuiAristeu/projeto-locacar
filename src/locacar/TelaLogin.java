@@ -5,7 +5,9 @@
  */
 package locacar;
 
+import dao.LoginDAO;
 import javax.swing.JOptionPane;
+import beans.Login;
 
 /**
  *
@@ -38,6 +40,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jButton5 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -56,7 +59,9 @@ public class TelaLogin extends javax.swing.JFrame {
         setForeground(new java.awt.Color(51, 51, 51));
         getContentPane().setLayout(null);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/identificador.png"))); // NOI18N
         jLabel1.setText("USUÁRIO:");
         getContentPane().add(jLabel1);
@@ -69,9 +74,10 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtUsuario);
-        txtUsuario.setBounds(110, 170, 458, 38);
+        txtUsuario.setBounds(110, 158, 458, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/senha.png"))); // NOI18N
         jLabel3.setText("SENHA:");
         getContentPane().add(jLabel3);
@@ -79,25 +85,38 @@ public class TelaLogin extends javax.swing.JFrame {
 
         txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         getContentPane().add(txtSenha);
-        txtSenha.setBounds(110, 290, 458, 38);
+        txtSenha.setBounds(110, 278, 458, 50);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/accept.png"))); // NOI18N
-        jButton1.setText("ENTRAR");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_form_edit.png"))); // NOI18N
+        jButton1.setText("ALTERAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(260, 360, 150, 60);
+        jButton1.setBounds(110, 370, 150, 60);
 
+        jLabel4.setBackground(new java.awt.Color(102, 102, 102));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Login");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(280, 0, 170, 64);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 70, 720, 20);
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/accept.png"))); // NOI18N
+        jButton5.setText("ENTRAR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(420, 370, 150, 60);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -117,16 +136,20 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String usuario = txtUsuario.getText();
-        String senha = txtSenha.getText();
-        if(usuario.equals("admin") && senha.equals("admin")){
+        new AlterarLogin().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         LoginDAO loginDAO = new LoginDAO();
+        if(loginDAO.checkLogin(txtUsuario.getText(), txtSenha.getText())){
             new MenuPrincipal().setVisible(true);
+            this.dispose();
         }else{
-            JOptionPane.showMessageDialog(null,"Dados incorretos.");
+            JOptionPane.showMessageDialog(null, "Dados incorretos");
         }
         txtUsuario.setText("");
         txtSenha.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,6 +188,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
