@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class Alugados {
     private int id;
-    private Clientes clientescpf;
+    private long clientescpf;
     private Carros carrosid;
     private Date data;
 
@@ -26,11 +26,11 @@ public class Alugados {
         this.id = id;
     }
 
-    public Clientes getClientescpf() {
+    public long getClientescpf() {
         return clientescpf;
     }
 
-    public void setClientescpf(Clientes clientescpf) {
+    public void setClientescpf(long clientescpf) {
         this.clientescpf = clientescpf;
     }
 

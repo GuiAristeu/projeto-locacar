@@ -30,6 +30,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnClientes = new javax.swing.JButton();
         btnCarros = new javax.swing.JButton();
+        btnAlugar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +52,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnClientes);
-        btnClientes.setBounds(482, 236, 204, 54);
+        btnClientes.setBounds(310, 240, 204, 54);
 
         btnCarros.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnCarros.setForeground(new java.awt.Color(0, 0, 0));
@@ -62,7 +63,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCarros);
-        btnCarros.setBounds(93, 236, 204, 54);
+        btnCarros.setBounds(30, 240, 204, 54);
+
+        btnAlugar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnAlugar.setForeground(new java.awt.Color(0, 0, 0));
+        btnAlugar.setText("ALUGAR");
+        btnAlugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlugarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAlugar);
+        btnAlugar.setBounds(580, 240, 204, 54);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -84,6 +96,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuClientes menuClientes = new MenuClientes();
         menuClientes.setVisible(true);
     }//GEN-LAST:event_btnClientesActionPerformed
+
+    private void btnAlugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugarActionPerformed
+        new MenuAlugar().setVisible(true);
+    }//GEN-LAST:event_btnAlugarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +137,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAlugar;
     private javax.swing.JButton btnCarros;
     private javax.swing.JButton btnClientes;
     private javax.swing.JLabel jLabel1;

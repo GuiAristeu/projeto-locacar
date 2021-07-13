@@ -31,14 +31,7 @@ public class MenuAlugar extends javax.swing.JFrame {
         }
     }
     
-    private void preencherComboClientes(){
-        ClientesDAO clientesDAO = new ClientesDAO();
-        List<Clientes> lista = clientesDAO.getClientes("");
-        
-        for(Clientes c: lista){
-            cmbClientes.addItem(c);
-        }
-    }
+    
 
     /**
      * Creates new form MenuAlugar
@@ -46,7 +39,7 @@ public class MenuAlugar extends javax.swing.JFrame {
     public MenuAlugar() {
         initComponents();
         preencherComboCarros();
-        preencherComboClientes();
+       
     }
 
     /**
@@ -63,100 +56,77 @@ public class MenuAlugar extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnRelatorio = new javax.swing.JButton();
         btnAlugar1 = new javax.swing.JButton();
-        cmbClientes = new javax.swing.JComboBox();
         cmbCarros = new javax.swing.JComboBox();
+        txtClientescpf = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Alugar");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("LocaCar");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(503, 6, 168, 64);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setText("CPF do Cliente:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(6, 358, 240, 48);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setText("Carro:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(151, 279, 95, 48);
 
         btnRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_side_list.png"))); // NOI18N
         btnRelatorio.setText("RELATÓRIO");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRelatorioActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRelatorio);
+        btnRelatorio.setBounds(871, 355, 240, 54);
 
         btnAlugar1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnAlugar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/application_key.png"))); // NOI18N
         btnAlugar1.setText("ALUGAR");
         btnAlugar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlugar1ActionPerformed(evt);
             }
         });
-
-        cmbClientes.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        getContentPane().add(btnAlugar1);
+        btnAlugar1.setBounds(871, 283, 240, 54);
 
         cmbCarros.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        getContentPane().add(cmbCarros);
+        cmbCarros.setBounds(264, 279, 565, 48);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cmbCarros, 0, 565, Short.MAX_VALUE)
-                    .addComponent(cmbClientes, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAlugar1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRelatorio))
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(503, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(450, 450, 450))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(cmbCarros, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(cmbClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(btnAlugar1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(334, Short.MAX_VALUE))
-        );
+        txtClientescpf.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        getContentPane().add(txtClientescpf);
+        txtClientescpf.setBounds(264, 355, 565, 54);
 
-        pack();
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-3, -4, 1130, 740);
+
+        setSize(new java.awt.Dimension(1137, 735));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
-        // TODO add your handling code here:
+        new MenuRelatorioAlugados().setVisible(true);
     }//GEN-LAST:event_btnRelatorioActionPerformed
 
     private void btnAlugar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlugar1ActionPerformed
         // TODO add your handling code here:
         LocalDate localDate = LocalDate.now();
         Date data = Date.valueOf(localDate);
-        Clientes clientescpf = (Clientes) cmbClientes.getSelectedItem();
+        long clientescpf = Long.parseLong(txtClientescpf.getText());
         Carros carrosid = (Carros) cmbCarros.getSelectedItem();
         
         Alugados alugados = new Alugados();
@@ -208,9 +178,10 @@ public class MenuAlugar extends javax.swing.JFrame {
     private javax.swing.JButton btnAlugar1;
     private javax.swing.JButton btnRelatorio;
     private javax.swing.JComboBox cmbCarros;
-    private javax.swing.JComboBox cmbClientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField txtClientescpf;
     // End of variables declaration//GEN-END:variables
 }

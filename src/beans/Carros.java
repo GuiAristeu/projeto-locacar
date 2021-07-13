@@ -84,6 +84,6 @@ public class Carros {
     }
     
     public String toString(){
-        return this.id+" "+this.modelo+" "+this.cor;
+        return this.id+" "+this.modelo;
     }
 }

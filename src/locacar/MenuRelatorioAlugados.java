@@ -28,9 +28,9 @@ public class MenuRelatorioAlugados extends javax.swing.JFrame {
         
         for(Alugados a : listaAlugados){
             Object[] obj = new Object[]{
-                a.getId(),
+                //a.getId(),
                 a.getClientescpf(),
-                //a.getCarrosid(),
+                a.getCarrosid(),
                 //a.getCarrosid().getModelo(),
                 a.getData(),
             };
@@ -58,22 +58,26 @@ public class MenuRelatorioAlugados extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRelatorioAlugados = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel1.setText("LocaCar");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(567, 6, 168, 64);
 
         tblRelatorioAlugados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "CPF do Cliente", "ID do Carro", "Data"
+                "CPF do Cliente", "ID Carro", "Data"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -82,30 +86,15 @@ public class MenuRelatorioAlugados extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblRelatorioAlugados);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(567, 567, 567)
-                .addComponent(jLabel1)
-                .addContainerGap(595, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(6, 88, 1318, 675);
 
-        pack();
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backgroun/5559852.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-3, -4, 1350, 800);
+
+        setSize(new java.awt.Dimension(1346, 807));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -146,6 +135,7 @@ public class MenuRelatorioAlugados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRelatorioAlugados;
     // End of variables declaration//GEN-END:variables

@@ -120,7 +120,7 @@ public class MenuListaCarros extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(-3, -4, 1200, 780);
 
-        setSize(new java.awt.Dimension(1177, 744));
+        setSize(new java.awt.Dimension(1177, 786));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

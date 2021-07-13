@@ -101,7 +101,7 @@ public class MenuListaClientes extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(-3, -4, 1280, 790);
 
-        setSize(new java.awt.Dimension(1264, 768));
+        setSize(new java.awt.Dimension(1264, 795));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

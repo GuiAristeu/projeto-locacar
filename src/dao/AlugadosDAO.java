@@ -33,7 +33,7 @@ public class AlugadosDAO {
                 + "(?, ?, ?)";
         try {
             PreparedStatement stmt = this.conn.prepareStatement(sql);
-            stmt.setLong(1, alugados.getClientescpf().getCpf());
+            stmt.setLong(1, alugados.getClientescpf());
             stmt.setInt(2, alugados.getCarrosid().getId());
             stmt.setDate(3, new java.sql.Date(alugados.getData().getTime()));
             stmt.execute();
@@ -43,11 +43,8 @@ public class AlugadosDAO {
     }
     
     public List<Alugados> getAlugados(){
-        String sql = "SELECT alugados.id as id, carrosid, data, "
-                + "cpf FROM alugados INNER JOIN "
-                + "clientes ON alugados.clientescpf = clientes.cpf";
-                //+ "modelo FROM alugados INNER JOIN "
-                //+ "carros ON alugados.carrosid = carrosid";
+        String sql = "SELECT clientescpf, data, carrosid, modelo FROM alugados"
+                + " INNER JOIN carros ON alugados.carrosid = carros.id";
         try {
             PreparedStatement stmt = this.conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
@@ -55,12 +52,12 @@ public class AlugadosDAO {
             while(rs.next()){
                 Alugados alugados = new Alugados();
                 Carros carros = new Carros();
-                Clientes clientes = new Clientes();
+                //Clientes clientes = new Clientes();
                 
-                alugados.setId(rs.getInt("id"));
-                clientes.setCpf(rs.getLong("cpf"));
-                alugados.setId(rs.getInt("carrosid"));
-                //carros.setModelo(rs.getString("modelo"));
+                //alugados.setId(rs.getInt("id"));
+                alugados.setClientescpf(rs.getLong("clientescpf"));
+                carros.setId(rs.getInt("carrosid"));
+                carros.setModelo(rs.getString("modelo"));
                 alugados.setCarrosid(carros);
                 alugados.setData(rs.getDate("data"));
                 
